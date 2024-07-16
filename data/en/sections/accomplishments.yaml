@@ -1,0 +1,52 @@
+# section information
+section:
+  name: Accomplishments
+  id: accomplishments
+  enable: true
+  weight: 9
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your accomplishments
+accomplishments:
+
+- name: Ultimate AWS Certified Solutions Architect Associate SAA-C03
+  timeline: "November 2023"
+  organization:
+    name: Udemy
+    url: https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c03
+  courseOverview: This course helps to prepare for the AWS Solution Associate exam - SAA-C03. The course covers key AWS services, architectural principles, real-world scenarios, and practice tests to help students develop the skills and knowledge required to pass the certification exam. With in-depth lectures, hands-on exercises, and exam preparation materials, this course provides a structured learning path for aspiring AWS Solutions Architects.
+  certificateURL: "https://www.udemy.com/certificate/UC-7bedda9c-674b-4c1d-b863-34e3cd42f645/"
+
+- name: Oracle Cloud Infrastructure 2023 AI Foundations Associate
+  timeline: "July 2024"
+  organization:
+    name: Oracle
+    url: https://education.oracle.com/products/trackp_OCI23AIFCA
+  courseOverview: This certification validates expertise in Oracle's cloud-based AI and machine learning services. The course covers OCI AI Platform, Oracle Digital Assistant, and Oracle Analytics Cloud, preparing learners to design, develop, and deploy AI/ML solutions on Oracle Cloud. The certification exam tests understanding of Oracle's AI and ML offerings, architecture, and implementation. This credential is targeted at cloud and AI professionals seeking to demonstrate proficiency in Oracle's AI and ML capabilities.
+  certificateURL: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=36A7E26F34972D69B1BC75AB40ED994417E49C8F10EE1113D8CC70B17E4304F7&fbclid=IwZXh0bgNhZW0CMTEAAR3BEFyBaYMzmZW-G7sHb8qFC7ZQf2EsuoIEIlckaFL4n4RHQN3aQVBFQD8_aem_1BUrmuMq-sP4lQawzX54DA"
+
+- name: "HashiCorp Certified: Terraform Associate - Hands-On Labs"
+  timeline: "April 2024"
+  organization:
+    name: Udemy
+    url: https://www.udemy.com/course/terraform-hands-on-labs/
+  courseOverview: "This course is designed to prepare learners for the HashiCorp Certified: Terraform Associate certification exam. The course covers hands-on experience with Terraform, the popular Infrastructure as Code (IaC) tool, to build, change, and version cloud and on-premises resources. Through step-by-step demonstrations and practice exercises, the course teaches core Terraform concepts, syntax, and workflows. It also provides guidance on exam preparation, including practice tests, to help students successfully obtain the HashiCorp Certified: Terraform Associate certification."
+  certificateURL: "https://www.udemy.com/certificate/UC-8e0942ba-68da-476b-8b17-54cd2b42dbe8/"
+
+- name: AWS CloudFormation Master Class v2 [2024]
+  timeline: "March 2024"
+  organization:
+    name: Udemy
+    url: https://www.udemy.com/course/aws-cloudformation-master-class/
+  courseOverview: "This course designed to help learners master the AWS CloudFormation Infrastructure as Code (IaC) service for provisioning and managing AWS resources. The course provides hands-on experience in writing CloudFormation templates using YAML, as well as in-depth understanding of all the CloudFormation building blocks like Parameters, Mappings, Resources, Outputs, Conditions, and Metadata. It also covers advanced CloudFormation features such as CloudFormation Init, Drift, and Nested Stacks to enable learners to effectively write infrastructure as code."
+  certificateURL: "https://www.udemy.com/certificate/UC-83f144fd-49d3-4135-a54e-f591ee98d685/"
+
+- name: AI Agent Workflow with crewAI
+  timeline: "July 2024"
+  organization:
+    name: crewAI
+    url: https://learn.crewai.com/
+  courseOverview: "This course teaches the principles of designing effective AI agents and organizing them into multi-agent systems to automate complex, multi-step business processes. Learners will explore key components like agent roles, memory, tools, task assignment, error handling, and cooperation to build efficient AI crews. The course utilizes the open-source crewAI library to create agent systems that can handle common business tasks such as resume writing, article creation, customer support, and financial analysis. Throughout the program, participants will design and implement several multi-agent systems to assist with these real-world workflows."
+  certificateURL: "https://clickops-corner.s3.ap-southeast-1.amazonaws.com/crewai_badge.pdf"

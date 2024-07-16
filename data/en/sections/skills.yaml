@@ -1,0 +1,53 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Kubernetes
+  logo: /images/sections/skills/kubernetes.png
+  summary: "Capable of deploying, managing application on Kubernetes. Experienced in writing Kubernetes controllers for CRDs."
+  url: "https://kubernetes.io/"
+
+- name: NodeJs Development
+  logo: /images/sections/skills/node.png
+  summary: "Using as the main point for professional development. Capable of writing scalable, testable, and maintainable program."
+  url: "https://nodejs.org/"
+
+- name: Cloud Computing
+  logo: /images/sections/skills/cloud.png
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
+
+- name: Docker
+  logo: /images/sections/skills/docker.svg
+  summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+  url: "https://www.docker.com/"
+
+- name: MySQL
+  logo: /images/sections/skills/mysql.png
+  summary: "Capable of setup and configuration of MySQL databases, database administration, performance tuning, and writing optimized SQL queries."
+  url: "https://prometheus.io/"
+
+- name: Linux
+  logo: /images/sections/skills/linux.png
+  summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+
+- name: Git
+  logo: /images/sections/skills/git.png
+  summary: "Experienced with git-based development. Mostly, use Github. Also, have experience in working with GitLab."
+  url: "https://git-scm.com/"
+
+- name: Terraform
+  logo: /images/sections/skills/terraform.png
+  summary: "Experienced in using Terraform for Infra as Code. Writes Terraform configurations to provision and manage cloud resources across multiple providers."
+
+- name: Vault
+  logo: /images/sections/skills/vault.png
+  summary: "Experienced in using Vault for secure data management, setting up Vault servers, configuring authentication, and defining access policies."
