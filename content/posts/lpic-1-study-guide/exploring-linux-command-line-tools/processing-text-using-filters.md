@@ -324,4 +324,248 @@ Mặc dù tương tự như `more` tuy nhiên `less` lại cho phép bạn di ch
 
 ### Looking at files with `head`
 
-Upcomming.......
+Một công cụ hữu ích khác để hiển thị các phần của tệp văn bản là tiện ích `head`. Cú pháp như sau:
+
+*head [OPTION]... [FILE]...*
+
+Theo mặc định, lệnh `head` hiển thị 10 dòng đầu tiên của tệp văn bản. Ví dụ ở Listing 1.38.
+
+**Listing 1.38:** Sử dụng `head` command
+```
+
+$ head /etc/passwd 
+root:x:0:0:root:/root:/bin/bash 
+bin:x:1:1:bin:/bin:/sbin/nologin 
+daemon:x:2:2:daemon:/sbin:/sbin/nologin 
+adm:x:3:4:adm:/var/adm:/sbin/nologin 
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin 
+sync:x:5:0:sync:/sbin:/bin/sync 
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown 
+halt:x:7:0:halt:/sbin:/sbin/halt 
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin 
+operator:x:11:0:operator:/root:/sbin/nologin
+$
+```
+
+Để hiển thị số dòng theo ý muốn chúng ta cần option `-n` để ghi đè hành vi mặc định (10 dòng). Cú pháp `head -n` theo sau là số dòng muốn hiển thị như ví dụ ở Listing 1.39.
+
+Listing 1.39: Sử dụng lệnh `head` để hiển thị số dòng ít hơn
+```
+$ head -n 2 /etc/passwd 
+root:x:0:0:root:/root:/bin/bash 
+bin:x:1:1:bin:/bin:/sbin/nologin 
+$
+$ head -2 /etc/passwd 
+root:x:0:0:root:/root:/bin/bash 
+bin:x:1:1:bin:/bin:/sbin/nologin 
+$
+```
+
+Lưu ý trong Listing 1.38, option `-n 2` là đối số được sử dụng với lệnh `head` chỉ hiển thị hai dòng đầu tiên của tệp. Tuy nhiên, lệnh thứ hai loại bỏ phần `n` chỉ còn số 2 và lệnh này vẫn sẽ hoạt động giống như lệnh đầu tiên.
+
+### Viewing Files with `tail`
+
+Nếu bạn muốn hiển thị dòng cuối cùng của tệp thay vì dòng đầu tiên, hãy sử dụng tiện ích `tail`. Cú pháp của `tail` cũng như lệnh `head` như sau:
+
+*tail [OPTION]... [FILE]...*
+
+Theo mặc định, lệnh `tail` sẽ hiển thị 10 dòng văn bản cuối cùng của tệp. Tuy nhiên, bạn có thể ghi đè hành vi đó bằng cách sử dụng khóa chuyển `-n` (hoặc `--lines=`) bằng một đối số. Đối số cho biết có bao nhiêu dòng từ cuối tập tin cần hiển thị. Nếu bạn thêm dấu cộng (+) vào trước đối số, tiện ích `tail` sẽ bắt đầu hiển thị các dòng văn bản của tệp bắt đầu từ số dòng được chỉ định cho đến cuối tệp. Có ba ví dụ về việc sử dụng đuôi theo những cách này trong Listing 1.40.
+
+**Listing 1.40:** Sử dụng `tail` command
+```
+$ tail /etc/passwd
+saslauth:x:992:76:Saslauthd user:/run/saslauthd:/sbin/nologin 
+pulse:x:171:171:PulseAudio System Daemon:/var/run/pulse:/sbin/nologin 
+gdm:x:42:42::/var/lib/gdm:/sbin/nologin 
+setroubleshoot:x:991:985::/var/lib/setroubleshoot:/sbin/nologin 
+rpcuser:x:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin 
+nfsnobody:x:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin 
+sssd:x:990:984:User for sssd:/:/sbin/nologin 
+gnome-initial-setup:x:989:983::/run/gnome-initial-setup/:/sbin/nologin
+tcpdump:x:72:72::/:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin 
+$
+$ tail -n 2 /etc/passwd
+tcpdump:x:72:72::/:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin 
+$
+$ tail -n +42 /etc/passwd gnome-initial-setup:x:989:983::/run/gnome-initial-setup/:/sbin/nologin 
+tcpdump:x:72:72::/:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin 
+$
+```
+
+Một trong những tính năng hữu ích nhất của tiện ích `tail` là khả năng theo dõi các tệp nhật ký. Để sử dụng tính năng này, bạn có thể sử dụng tùy chọn `-f` (hoặc `--follow`) với lệnh `tail` và cung cấp tên tệp nhật ký làm đối số cho lệnh. Bạn sẽ thấy một vài mục nhập nhật ký gần đây ngay lập tức. Khi bạn tiếp tục theo dõi, các thông điệp bổ sung sẽ hiển thị khi chúng được thêm vào tệp nhật ký.
+
+Để kết thúc phiên giám sát của bạn bằng `tail`, bạn phải sử dụng tổ hợp phím `Ctrl+C`. Một ví dụ về xem tệp nhật ký bằng tiện ích `tail` được hiển thị trong Listing 1.41.
+
+**Listing 1.41:** Watching a log file with the tail command
+```
+$ sudo tail -f /var/log/auth.log
+[sudo] password for Christine:
+Aug 27 10:15:14 Ubuntu1804 sshd[15662]: Accepted password [...] 
+Aug 27 10:15:14 Ubuntu1804 sshd[15662]: pam_unix(sshd:sess[...] 
+Aug 27 10:15:14 Ubuntu1804 systemd-logind[588]: New sessio[...] 
+Aug 27 10:15:50 Ubuntu1804 sudo: Christine : TTY=pts/1 ; P[...] 
+Aug 27 10:15:50 Ubuntu1804 sudo: pam_unix(sudo:session): s[...] 
+Aug 27 10:16:21 Ubuntu1804 login[10703]: pam_unix(login:se[...] 
+Aug 27 10:16:21 Ubuntu1804 systemd-logind[588]: Removed se[...] 
+^C
+$
+```
+
+## File-Summarizing Commands
+
+### Counting with `wc`
+
+Tiện ích `wc` (word count) là cách dễ nhất và phổ biến nhất để xác định số lượng (dòng, từ và byte) trong một tệp văn bản.
+
+Cú pháp cơ bản của lệnh `wc` là:
+
+*wc [OPTION]... [FILE]...*
+
+Khi bạn chạy lệnh `wc` mà không có bất kỳ tùy chọn nào và cung cấp tên tệp làm đối số, `wc` sẽ hiển thị các thông tin sau của tệp tin:
+
+- Số dòng
+- Số từ
+- Số byte
+
+Đây là một ví dụ (Listing 1.42).
+
+**Listing 1.42:**  Sử dụng `wc` command
+```
+$ wc random.txt
+5 9 52 random.txt
+$
+```
+
+Có một số tùy chọn hữu ích và thường được sử dụng cho lệnh `wc`  được liệt kê trong Bảng 1.7.
+
+**TABLE 1.7:** Các options phổ biến của `wc` command
+
+| Short | Long    | Description |
+| :---- | :------ | :------------------------------------------------------------------ |
+| -c | --bytes | Hiển thị số byte của tập tin. |
+| -L | --max-line-length | Hiển thị số byte của dòng dài nhất của tập tin. |
+| -l | --lines | Hiển thị số dòng của tập tin.|
+| -m | --chars | Hiển thị số ký tự của tập tin |
+| -w | --words | Hiển thị số từ của tập tin |
+
+Một tùy chọn của lệnh `wc` để xử lý các tệp cấu hình (configuration file) là tùy chọn `-L`. Thông thường, độ dài dòng cho một tệp cấu hình sẽ dưới 150 byte, mặc dù vẫn có những ngoại lệ. Do đó, nếu bạn vừa chỉnh sửa một tệp cấu hình và dịch vụ đó không còn hoạt động nữa, hãy kiểm tra độ dài dòng dài nhất của tệp. Độ dài dòng dài hơn bình thường có thể cho thấy bạn đã vô tình trộn hai dòng cấu hình lại với nhau. Dưới đây là một ví dụ (Listing 1.43):
+
+**Listing 1.43:** Sử dụng `wc` command để kiểm tra chiều dài dòng
+```
+$ wc -L /etc/nsswitch.conf 
+72 /etc/nsswitch.conf
+$
+```
+
+### Pulling Out Portions with `cut`
+
+Để sàng lọc dữ liệu trong một file văn bản lớn và trích xuất nhanh chóng các phần dữ liệu nhỏ. `cut` là một công cụ hữu ích để thực hiện việc này. Nó sẽ cho phép bạn xem các trường cụ thể trong bản ghi của tệp. Cú pháp cơ bản của lệnh như sau:
+
+*cut OPTION... [FILE]...*
+
+Trước khi chúng ta đi sâu vào sử dụng lệnh này, có một số điều cơ bản cần hiểu về lệnh `cut`. Cụ thể như sau:
+
+**Text File Records** Một Text File Records là một file đơn lẻ kết thúc bằng một **newline linefeed** (là ký tự ASCII LF). Bạn có thể kiểm tra tệp của mình có sử dụng có sử dụng end-of-line character này không bằng lệnh `cat -E`, nó sẽ hiển thị tất cả **newline linefeed** thành ký tự $. Nếu bản ghi tệp văn bản của bạn kết thúc bằng ký tự ASCII NUL, bạn cũng có thể sử dụng lệnh `cut` trên chúng, nhưng bạn phải sử dụng tùy chọn `-z`.
+
+**Text File Record Delimiter** Để sử dụng một số tùy chọn lệnh của `cut` một cách đúng đắn, các field phải tồn tại trong mỗi bản ghi tệp văn bản. Những field này không phải là các field kiểu cơ sở dữ liệu, mà là các dữ liệu được phân cách bởi một số dấu phân cách. Dấu phân cách (**Delimiter**) là một hoặc nhiều ký tự tạo ra một ranh giới giữa các mục dữ liệu khác nhau trong một bản ghi. 1 dấu cách cũng có thể được xem là dấu phân cách. Tệp mật khẩu */etc/passwd* sử dụng dấu hai chấm (:) để phân cách các mục dữ liệu trong một bản ghi.
+
+**Text File Changes** Khác với tên của nó, lệnh `cut` không thay đổi bất kĩ dữ liệu nào trong văn bản, nó chỉ sao chép dữ liệu bạn muốn xem và hiển thị nó cho bạn. Bạn có thể yên tâm rằng không có thay đổi nào với tệp của bạn.
+
+Lệnh `cut` có nhiều tuỳ chọn mà chúng ta sẽ dùng thường xuyên. Các tuỳ chọn này được liệt kê ở Bảng 1.8.
+
+**TABLE 1.8:** Các tuỳ chọn phổ biến của `cut` command
+| Short            | Long                      | Description                                                         |
+| :--------------  | :------------------------ | :------------------------------------------------------------------ |
+| -c *nlist*       | --characters *nlist*      | Chỉ hiển thị các ký tự trong *nlist* (e.g., 1-5). |
+| -b *blist*       | --bytes *blist*           | Hiển thị các bytes cụ thể trong *blist* (e.g, 1-2). |
+| -d *d*           | --delimiter *d*           | Chỉ định dấu phân cách của các field của bản ghi là *d*. Điều này overwrite dấu phân cách mặc định là Tab. Đặt *d* trong dấu nhảy kép để tránh kết quả không mong muốn |
+| -f *flist*       | --fields *flist*          | Chỉ hiển thị các field trong *flist* (e.g., 1,3) |
+| -s               | --only-delimited          | Chỉ hiển thị các bản ghi có chứa dấu phân cách được chỉ định. |
+| -z               | --zero-terminated         | Chỉ định ký tự cuối dòng của bản ghi là ký tự ASCII NUL. |
+
+**Listing 1.44:** Sử dụng `cut` command
+```
+$ head -2 /etc/passwd 
+root:x:0:0:root:/root:/bin/bash 
+bin:x:1:1:bin:/bin:/sbin/nologin 
+$
+$ cut -d ":" -f 1,7 /etc/passwd 
+root:/bin/bash 
+bin:/sbin/nologin
+[...]
+$
+``` 
+
+Trong Listing 1.44, lệnh `head` hiển thị 2 dòng đầu tiên của tệp passwd. Tệp văn bản này sử dụng dấu hai chấm (:) để phân cách các trường trong mỗi bản ghi. Việc sử dụng lệnh `cut` lần đầu tiên sẽ chỉ định dấu phân cách là dấu hai chấm bằng tùy chọn `-d`. Dấu hai chấm đang được để trong dấu nháy kép đề phòng kết quả không mong muốn. Tuỳ chọn `-f` chỉ định rằng chỉ hiển thị các field 1 (tên người dùng) và 7 (shell) 
+
+### Discovering Repeated Lines with uniq
+
+Một cách nhanh chóng để tìm các dòng lặp lại trong tệp văn bản là sử dụng tiện ích `uniq`. Chỉ cần gõ `uniq` và theo sau là tên tệp có nội dung bạn muốn kiểm tra.
+
+Tiện ích `uniq` sẽ chỉ tìm thấy các dòng văn bản lặp lại nếu chúng nằm ngay sau nhau. Khi được gọi mà không có bất kỳ tùy chọn nào, lệnh sẽ chỉ hiển thị các dòng duy nhất (không lặp lại). Một ví dụ về cách sử dụng lệnh này được hiển thị trong Listing 1.45.
+
+**Listing 1.45:** Sử dụng `uniq` command
+```
+$ cat NonUniqueLines.txt 
+A
+C
+C
+A 
+$
+$ uniq NonUniqueLines.txt 
+A
+C
+A
+$
+```
+
+Lưu ý rằng trong đầu ra của lệnh `cat` thực tế có hai tập hợp dòng lặp lại trong tệp này. Một là dòng C và còn lại là dòng A. Vì tiện ích `uniq` chỉ nhận dạng các dòng lặp lại nối tiếp nhau trong một tệp văn bản nên chỉ một trong các dòng văn bản C bị xóa khỏi màn hình. Hai dòng A vẫn được hiển thị.
+
+### Digesting an MD5 Algorithm
+
+Tiện ích `md5sum` dựa trên thuật toán MD5. Ban đầu nó được tạo ra để sử dụng trong mật mã. Nó không còn được sử dụng với các chức năng cho mật mã như vậy do có nhiều lỗ hổng đã biết. Tuy nhiên, nó vẫn rất hữu ích để kiểm tra tính toàn vẹn của tệp. Một ví dụ đơn giản được hiển thị trong Listing 1.46.
+
+**Listing 1.46:** Sử dung `md5sum` để kiểm tra tính toàn vẹn của tập tin
+```
+$ md5sum fourtytwo.txt 
+0ddaa12f06a2b7dcd469ad779b7c2a33 fourtytwo.txt 
+$
+```
+
+`md5sum` tạo ra giá trị băm 128-bit. Nếu bạn sao chép tệp sang hệ thống khác trên mạng của mình, hãy chạy md5sum trên tệp đã sao chép. Nếu bạn nhận thấy giá trị băm của tệp gốc và tệp sao chép khớp nhau, điều này cho thấy không có lỗi tệp nào xảy ra trong quá trình truyền tệp.
+
+
+### Securing Hash Algorithms
+
+Thuật toán băm an toàn (SHA) là một nhóm gồm nhiều các hàm băm khác nhau. Mặc dù thường được dùng cho mục đích mã hoá nhưng chúng cũng có thể sử dụng để xác minh tính toàn vẹn của tệp sao khi sao chép hoặc chuyển sang một hệ thống khác. 
+
+Một số tiện ích triển khai các thuật toán này trên hệ thống Linux. Cách nhanh nhất để tìm thấy chúng là thông qua các phương pháp được liệt kê trong Listing 1.47. Một vài bản phân phối sẽ lưu trữ chúng trong thư mục */bin* thay vì */usr/bin*.
+
+**Listing 1.47:** Tên các tiện ích triển khai các thuật toán SHA trên Linux
+```
+$ ls -1 /usr/bin/sha???sum 
+/usr/bin/sha224sum 
+/usr/bin/sha256sum 
+/usr/bin/sha384sum 
+/usr/bin/sha512sum
+$
+```
+
+**Listing 1.48:** Sử dụng `sha256sum` and `sha512sum` để kiểm tra file
+```
+$ sha256sum fourtytwo.txt 
+0b2b6e2d8eab41e73baf0961ec707ef98978bcd8c7 
+74ba8d32d3784aed4d286b fourtytwo.txt
+$
+$ sha512sum fourtytwo.txt 
+ac72599025322643e0e56cff41bb6e22ca4fbb76b1d 7fac1b15a16085edad65ef55bbc733b8b68367723ced 
+3b080dbaedb7669197a51b3b6a31db814802e2f31 fourtytwo.txt 
+$
+```
+
+Lưu ý trong Listing 1.48, các độ dài giá trị băm khác nhau được tạo ra bởi các lệnh khác nhau. Tiện ích `sha512sum` sử dụng thuật toán `SHA-512`, thuật toán tốt nhất để sử dụng cho mục đích bảo mật và thường được sử dụng để băm salted password trong tệp */etc/shadow* trên Linux.
+
+Bạn có thể sử dụng các tiện ích SHA này, giống như **md5sum** được sử dụng trong Listing 1.46, để đảm bảo tính toàn vẹn của tệp khi nó được truyền sang các hệ thống. Bằng cách đó, tệp sẽ tránh bị hỏng cũng như tránh được mọi sửa đổi độc hại đối với tệp.
