@@ -316,7 +316,7 @@ params:
     
     # Enable reading time support in post cards and in post pages
     readingTime:
-      enable: true
+      enable: false
 
 
   # Provide footer configuration.
