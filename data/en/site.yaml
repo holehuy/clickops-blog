@@ -25,5 +25,5 @@ openGraph:
   title: ClickOps's Corner
   type: website
   description: Portfolio and personal blog of Le Huy Ho and ClickOps's Corner.
-  image: assets/images/author/holehuy.jpeg
-  url: https://hugo-toha.github.io
+  image: https://holehuy.com/assets/images/author/holehuy.jpeg
+  url: https://holehuy.com

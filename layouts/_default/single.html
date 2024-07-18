@@ -1,5 +1,6 @@
 {{ define "header" }}
 <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Title }}{{ end }}" />
+<meta name="og:image" content="{{ (index site.Data site.Language.Lang).site.openGraph.url | default site.BaseURL }}{{ .Params.hero }}">
 {{ end }}
 
 {{ define "navbar" }}

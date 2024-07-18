@@ -174,6 +174,7 @@ body.kind-page {
       @include brand-background();
       .btn {
         border: none !important;
+        margin-left: 4px !important;
       }
     }
   }

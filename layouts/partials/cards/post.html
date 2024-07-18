@@ -16,7 +16,7 @@
     </div>
     <div class="card-footer">
       <span class="float-start">
-          {{ .Date | time.Format ":date_full" }}
+          {{ .Date | time.Format ":date_medium" }}
           {{ if site.Params.features.readingTime }} | {{.ReadingTime}} {{ i18n "minute" .ReadingTime }} {{ end }}</span>
       <a
       href="{{ .RelPermalink | relLangURL }}"
