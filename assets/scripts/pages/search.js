@@ -7,10 +7,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const fuseOptions = {
     shouldSort: true,
     includeMatches: true,
-    threshold: 0.0,
+    threshold: 0.1,
     tokenize: true,
     location: 0,
-    distance: 100,
+    distance: 1000,
     maxPatternLength: 32,
     minMatchCharLength: 1,
     keys: [
@@ -36,11 +36,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function executeSearch (searchQuery) {
     const url = window.location.href.split('/search/')[0] + '/index.json'
-
+    console.log(url)
+    console.log(searchQuery)
     fetch(url).then(response => response.json()).then(function (data) {
       const pages = data
       const fuse = new Fuse(pages, fuseOptions)
       const results = fuse.search(searchQuery)
+      console.log(results)
 
       document.getElementById('search-box').value = searchQuery
       if (results.length > 0) {
