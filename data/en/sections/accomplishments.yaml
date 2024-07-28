@@ -50,3 +50,19 @@ accomplishments:
     url: https://learn.crewai.com/
   courseOverview: "This course teaches the principles of designing effective AI agents and organizing them into multi-agent systems to automate complex, multi-step business processes. Learners will explore key components like agent roles, memory, tools, task assignment, error handling, and cooperation to build efficient AI crews. The course utilizes the open-source crewAI library to create agent systems that can handle common business tasks such as resume writing, article creation, customer support, and financial analysis. Throughout the program, participants will design and implement several multi-agent systems to assist with these real-world workflows."
   certificateURL: "https://clickops-corner.s3.ap-southeast-1.amazonaws.com/crewai_badge.pdf"
+
+- name: Data Visualization with D3.js (freeCodeCamp)
+  timeline: "July 2024"
+  organization:
+    name: freeCodeCamp
+    url: https://www.freecodecamp.org/
+  courseOverview: "Data is all around us, but it doesn't mean much without shape or context. In the Data Visualization Certification, you'll build charts, graphs, and maps to present different types of data with the D3.js library. You'll also learn about JSON (JavaScript Object Notation), and how to work with data online using an API (Application Programming Interface)."
+  certificateURL: "https://www.freecodecamp.org/certification/holehuy/data-visualization"
+
+- name: Foundational C# with Microsoft
+  timeline: "August 2023"
+  organization:
+    name: Microsoft + freeCodeCamp
+    url: https://www.freecodecamp.org/
+  courseOverview: "This course offers a comprehensive introduction to C# programming, covering its core concepts, syntax, and practical application in software development. Through hands-on exercises and projects, you will learn the fundamentals of C#, including variables, data types, control structures, and object-oriented programming principles. By the end of this course, you will have gained the practical skills and knowledge needed to confidently leverage C# for building applications."
+  certificateURL: "https://www.freecodecamp.dev/certification/fcc749938b8-65d6-4938-93dd-644010e51fef/foundational-c-sharp-with-microsoft"
