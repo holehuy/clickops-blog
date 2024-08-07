@@ -119,7 +119,7 @@ params:
     favicon: /images/site/favicon.png
 
   # GitHub repo of your site
-  gitRepo: https://github.com/hugo-toha/hugo-toha.github.io
+  gitRepo: https://github.com/holehuy/clickops-blog
   # Default branch of your Git repo
   gitBranch: main
 
