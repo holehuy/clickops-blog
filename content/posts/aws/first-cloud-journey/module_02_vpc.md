@@ -15,9 +15,9 @@ menu:
 
 VPC là một dịch vụ cung cấp môi trường mạng riêng ảo, được cô lập với các mạng khác trên AWS Cloud. VPC cho phép khởi tạo các tài nguyên của AWS (như máy chủ, cơ sở dữ liệu, thiết bị cân bằng tải) trong một môi trường mạng riêng ảo và chúng ta có quyền kiểm soát. 
 
-Trong hình bên dưới thể hiện các thành phần và các mối quan hệ cơ bản khi chúng ta làm việc với VPC.
+Trong hình bên dưới thể hiện các thành phần và các mối quan hệ cơ bản khi làm việc với VPC.
 
-{{< img src="/assets/images/posts/first-cloud-journey/vpc-overview.png" align="center" title="Tổng quan về VPC" >}}
+{{<img src="/assets/images/posts/first-cloud-journey/vpc-overview/vpc-overview.png" align="center" title="Tổng quan về VPC" >}}
 
 ## Tìm hiểu về CIDR và IPv4
 
@@ -44,15 +44,15 @@ Khi làm việc với AWS, CIDR thường được sử dụng trong **Security 
 - Tất cả các địa chỉ IP: 0.0.0.0/0
 - Hoặc một dải từ 192.168.0.0 đến 192.168.0.63: 192.168.0.0/26 (có 64 địa chỉ IP)
 
-Chúng ta có thể dùng công cụ sau để tính một cách thuận tiện. Công cụ [CIDR Caculator](https://www.ipaddressguide.com/cidr) rất tiện nếu chúng ta cần xác định dải IP mà CIDR cụ thể đang biểu diễn. Chỉ cần nhập địa chỉ CIDR vào công cụ và nhấp vào nút **Calculate**. Thao tác này sẽ trả về thông tin như First IP (IP đầu tiên), Last IP (IP cuối cùng), Number of Hosts (số lượng host), v.v...
+Chúng ta có thể dùng công cụ sau để tính một cách thuận tiện. Công cụ [CIDR Caculator](https://www.ipaddressguide.com/cidr) rất tiện nếu cần xác định dải IP mà CIDR cụ thể đang biểu diễn. Chỉ cần nhập địa chỉ CIDR vào công cụ và nhấp vào nút **Calculate**. Thao tác này sẽ trả về thông tin như First IP (IP đầu tiên), Last IP (IP cuối cùng), Number of Hosts (số lượng host), v.v...
 
 {{<img src="/assets/images/posts/first-cloud-journey/vpc-overview/cidr-caculator.png" align="center" title="CIDR Caculator">}}
 
 ## VPC
 
-Amazon Virtual Private Cloud (Amazon VPC) là dịch vụ cho phép chúng ta khởi chạy các tài nguyên AWS trong mạng ảo cô lập theo logic xác định. Có toàn quyền kiểm soát môi trường mạng ảo của mình, bao gồm lựa chọn dải địa chỉ IP, tạo các mạng con, cấu hình các bảng định tuyến và cổng kết nối mạng. Chúng ta có thể dùng cả IPv4 lẫn IPv6 cho hầu hết các tài nguyên trong VPC. Mỗi VPC là một môi trường mạng ảo biệt lập trên AWS Cloud, và nó tài nguyên riêng của tài khoảng AWS của chúng ta. Các tài nguyên và các dịch vụ AWS khác sẽ hoạt động bên trong mạng VPC để cung cấp dịch vụ. Gần như chúng ta có thể mapping VPC với các mô hình mạng truyền thống, tuy nhiên những thành phần như routers, switches, VLANS không rõ ràng trong VPC, các thành phần này đã được trừu tượng hoá thành các thành phần ảo trong VPC.
+Amazon Virtual Private Cloud (Amazon VPC) là dịch vụ cho phép khởi chạy các tài nguyên AWS trong mạng ảo cô lập theo logic xác định. Có toàn quyền kiểm soát môi trường mạng ảo của mình, bao gồm lựa chọn dải địa chỉ IP, tạo các mạng con, cấu hình các bảng định tuyến và cổng kết nối mạng. Chúng ta có thể dùng cả IPv4 lẫn IPv6 cho hầu hết các tài nguyên trong VPC. Mỗi VPC là một môi trường mạng ảo biệt lập trên AWS Cloud, và nó tài nguyên riêng của tài khoảng AWS. Các tài nguyên và các dịch vụ AWS khác sẽ hoạt động bên trong mạng VPC để cung cấp dịch vụ. Gần như chúng ta có thể mapping VPC với các mô hình mạng truyền thống, tuy nhiên những thành phần như routers, switches, VLANS không rõ ràng trong VPC, các thành phần này đã được trừu tượng hoá thành các thành phần ảo trong VPC.
 
-VPC nằm trong 1 Region, khi chúng ta tạo VPC cần xác định CIDR IPv4 bắt buộc và IPv6 (tuỳ chọn). Chúng ta có thể có nhiều VPC trong 1 Region nhưng hạn chế hiện tại là chỉ có thể có tối đa 5 VPC trong 1 Region (tuy nhiên đây là soft limit, có thể xin điều chỉnh được). Mục đích chính của VPC thường dùng để phân tách các môi trường (PROD, DEV, TEST, STAGING) và cô lập.
+VPC nằm trong 1 Region, khi tạo VPC cần xác định CIDR IPv4 bắt buộc và IPv6 (tuỳ chọn). Có thể có nhiều VPC trong 1 Region nhưng hạn chế hiện tại là chỉ có thể có tối đa 5 VPC trong 1 Region (tuy nhiên đây là soft limit, có thể xin điều chỉnh được). Mục đích chính của VPC thường dùng để phân tách các môi trường (PROD, DEV, TEST, STAGING) và cô lập.
 
 Sử dụng VPC, chúng ta có thể xây dựng các infrastructure và đặt các instances bên trong đó, cấu hình tất cả những gì mà các tài nguyên bên trong VPC cần để hoạt động. Ví dụ
 - IP addresses
@@ -67,7 +67,7 @@ Một VPC được tạo ra sẽ chỉ tồn tại trên một AWS Region. Mặc
 
 Việc quản lý các VPC sẽ được thực hiện thông qua các giao diện quản lý AWS sau:
 
-- **AWS Management Console** Là một giao diện web cho phép chúng ta quản lý tất cả các AWS resources (hình ảnh bên dưới)
+- **AWS Management Console** Là một giao diện web cho phép quản lý tất cả các AWS resources (hình ảnh bên dưới)
 - [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/)
 - [AWS Software Development Kit (SDK)](https://aws.amazon.com/developer/tools/#SDKs)
 - **Query APIs** Là các Low-level API gửi thông qua HTTP/HTTPS (tham khảo thêm tại [đây](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Welcome.html))
@@ -111,7 +111,7 @@ Mỗi Subnet phải được liên kết với một bảng định tuyến, tro
 
 **NAT Gateway:** là một thành phần cho phép server ảo trong mạng private có thể kết nối tới Internet hoặc dịch vụ khác của AWS nhưng lại ngăn không cho Internet kết nối đến server đó.
 
-Ngoài ra chúng ta còn có **NAT Instance** là một instance chúng ta tạo ra và có chức năng tương tự như NAT Gateway. Bạn có thể tham khảo sự khác nhau giữa NAT Gateway và NAT Instance được mô tả chi tiết [tại đây](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html).
+Ngoài ra còn có **NAT Instance** là một instance chúng ta tạo ra và có chức năng tương tự như NAT Gateway. Bạn có thể tham khảo sự khác nhau giữa NAT Gateway và NAT Instance được mô tả chi tiết [tại đây](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-comparison.html).
 
 **Elastic IP** là một địa chỉ public IP có thể được liên kết với một instance trong VPC của bạn. Nó cho phép bạn giữ địa chỉ IP của máy chủ ảo không đổi khi khởi động lại instance.
 
@@ -130,18 +130,77 @@ Ngoài ra còn cố một số dịch vụ khác liên quan đến VPC sẽ tìm
 - Transit Gateway
 - ....
 
-## Hands On Lab
+## VPC Peering 
 
-Bài lab trong module này là [Start With Amazon VPC and AWS VPN Site-to-Site](https://awsstudygroup.com)
+Khi làm việc, chúng ta có nhiều VPC được tạo ra và chúng có thể nằm trên các Region khác nhau, các account khác nhau. Và ý tưởng của VPC Peering là kết nối 2 VPC sử dụng AWS network. Khi 2 VPC được kết nối với nhau bằng cách sử dụng VPC peering, những dịch vụ trong các VPC đó có thể giao tiếp bằng IP riêng từ VPC nguồn đến VPC đích và ngược lại. 
 
-Mình sẽ chia bài lab này thành 2 phần:
+Khi tạo kết nối peering, CIDR block của các VPC phải không được chồng chéo với nhau (overlapping CIDR), nếu overlap IP thì các instance sẽ không giao tiếp với nhau được. 
 
-1. Thực hành cơ bản về VPC để hiểu các thành phần của nó
-2. Cấu hình VPN Site to Side để kết nối môi trường VPC của AWS
+VPC Peering chỉ kết nối 2 VPC lại với nhau và chúng KHÔNG có tính chất bắt cầu. Tức là mặc dù VPC A kết nối với B, B kết nối với C, nhưng A và C không thể giao tiếp với nhau được, cần tạo thêm 1 kết nối để đấu nối giữa A và C nữa.
 
-### Thực hành cơ bản về VPC
+{{< alert type="info" >}}
+Chúng ta có công thức tính số lượng kết nối VPC Peering khi có số lượng VPC (n) là n*(n-1)/2. Giả sử chúng ta có 5 VPC thì số lượng VPC Peering connection cần có để kết nối tất cả các VPC với nhau là: 5*(5-1)/2 = 10 kết nối.
+{{< /alert >}}
 
-Trong link lab thì đã có đủ các hướng dẫn 
+Sau khi tạo VPC Peering connection, chúng ta phải update Route Table của các VPC subnet để các instance có thể giao tiếp với nhau.
+
+{{< alert type="success" >}}
+Chúng ta có thể tham chiếu và sử dụng các security của các account khác trong cùng một region nếu 2 VPC đã được đấu nối với nhau.
+{{< /alert >}}
+
+{{<img src="/assets/images/posts/first-cloud-journey/vpc-overview/reference-security-group-cross-acc-same-region.png" align="center" title="CIDR Caculator">}}
+
+## VPC Endpoint
+
+Khi làm việc với các dịch vụ của AWS, chẳng hạn như là DynamoDB, S3, ... các dịch vụ này hoàn toàn có thể truy cập từ internet. Tuy nhiên với các tài nguyên bên trong VPC, ví dụ như bên trong Private subnet thì traffic cần đi qua NAT Gateway rồi đi ra ngoài internet thông qua Internet Gateway rồi mới có thể connect đến DynamoDB. Hoặc với tài nguyên ở Public Subnet thì sẽ đi ra ngoài thông qua Internet Gateway. 
+
+Như hình ở bên dưới là mô tả cho các traffic kể trên
+
+{{<img src="/assets/images/posts/first-cloud-journey/vpc-overview/vpc-endpoint-diagram.png" align="center" title="Access AWS service from VPC">}}
+
+Tuy nhiên trong một số trường hợp chúng ta cần truy cập các dịch vụ AWS mà không cần thông qua internet, truy cập chúng một cách riêng tư. VPC Endpoint sẽ là hướng giải quyết. VPC Enpoint cho phép kết nối tới các AWS resource mà không cần thông qua internet.
+
+{{<img src="/assets/images/posts/first-cloud-journey/vpc-overview/vpc-endpoint-flow.png" align="center" title="Access AWS service from VPC flow">}}
+
+Với option 1, traffic đi ra internet thông qua NAT Gateway và Internet Gateway để connect tới dịch vụ AWS. Option này vẫn hoạt động tốt, tuy nhiên về mặc chi phí ta phải bỏ ra nhiều tiền cho option này (phần lớn là ở NAT Gatewat). Và performance cũng sẽ không được tối ưu.
+
+Với option 2 sử dụng VPC Endpoint cho phép connect các dịch vụ AWS sử dụng mạng private (private network) của aws thay vì sử dụng internet. Khi sử dụng VPC enpoints sẽ giúp tăng tốc độ đường truyền, đồng thời giảm độ trễ (vì không cần phải đi ra ngoài internet). 
+
+Như vậy, khi sử dụng VPC endpoint đã dần loại bỏ Internet Gateway, NAT Gateway, ... mặc dù vẫn có thể truy cập dịch vụ AWS, điều này làm đơn giản hoá hạ tầng mạng của dự án. 
+
+Có các loại VPC Endpoint sau:
+
+- Interface Endpoint: 
+  - cung cấp 1 ENI với private IP
+  - đóng vai trò là điểm truy cập vào hầu hết các dịch vụ AWS
+  - Cần attach một Security Group
+  - Tính tiền theo giờ và số GB được xử lý
+
+{{<img src="/assets/images/posts/first-cloud-journey/vpc-overview/vpc-interface-endpoint.png" align="center" title="Access AWS service from VPC flow">}}
+
+- Gateway Enpoint: 
+  - Cung cấp 1 gateway dùng như một Target trong Route Table
+  - Hiện tại chỉ hỗ trợ cho 2 dịch vụ đó là S3 và DynamoDB
+  - Miễn phí
+
+Như hình trên, ta đã cung cấp một VPC Endpoint với type là Gateway endpoint để các instance trong private Subnet có thể truy cập được đến DynamoDB và S3. 
+
+Đối với DynamoDB và S3, có 2 cách để truy cập thông qua Interface Endpoint hoặc Gatewate Endpoint. Vậy chọn cái nào cho phù hợp? Theo mình tất nhiên là chọn cái nào rẻ rồi =)))
+
+Tuy nhiên cũng có vài trường hợp cần sử dụng Interface endpoint với S3 và DynamoDB. Vd: truy cập DynamoDB hoặc S3 khi dùng Site-to-Side VPN hoặc Direct Connect. 
+
+## VPC Flow Logs
+
+VPC FLow Logs là tính năng giúp capture thông tin IP traffic đến và đi Network Interfaces trong VPC (ngoài ra còn có thể capture các thông tin kết nối của các AWS managed interface như: ELB, RDS, RedisCache,...). Có 3 loại Flow Logs:
+- VPC Flow Logs
+- Subnet Flow Logs
+- Elastic Network Interface (ENI) FLow Logs
+
+Flow Logs sẽ hữu dụng khi chúng ta cần monitor hoặc troubleshoot khi có vấn đề về kết nối.
+
+Dữ liệu Flow Logs có thể ghi vào S3, hoặc CloudWatch Logs hoặc Kinesis Data Firehose. 
+
+upcoming ...
 
 
 
