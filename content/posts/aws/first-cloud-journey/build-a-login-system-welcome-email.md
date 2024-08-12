@@ -1,8 +1,8 @@
 ---
-title: "Xây dựng hệ thống đăng nhập xác thực bằng email với Lambda Trigger và Amplify"
+title: "Xây dựng Login System Welcome Email sử dụng Post Confirmation Lambda, SES và Amazon Cognito"
 date: 2024-08-12T06:00:20+06:00
 hero: /images/posts/aws/hero-workshop1.png
-description: "Xây dựng hệ thống đăng nhập xác thực bằng email với Lambda Trigger và Amplify"
+description: "Xây dựng Login System Welcome Email sử dụng Post Confirmation Lambda, SES và Amazon Cognito"
 menu:
   sidebar:
     name: "Workshop Login System with Amplify, Cognito, Lambda and SES"
