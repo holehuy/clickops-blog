@@ -34,7 +34,7 @@ Trước khi CIDR ra đời, mô hình phân lớp địa chỉ IP IPv4 truyền
 Để khắc phục các vấn đề trên, CIDR ra đời vào những năm 1990 như một giải pháp mới cho việc định tuyến và cấp phát địa chỉ IP. CIDR loại bỏ việc phân chia địa chỉ IP theo lớp cứng định như trước đây. Thay vào đó, CIDR sử dụng ký hiệu CIDR (**x.x.x.x/y**) để biểu diễn một khối địa chỉ IP, bao gồm 2 thành phần:
 
 - Base IP: đại diện cho địa chỉ IP có trong mạng (x.x.x.x). Ví dụ (10.0.0.0, 192.168.0.0, ...)
-- Subnet Mark: chỉ định số bit có thể thay đổi trên địa chỉ IP đó. Ví dụ (/0, /24, /32)
+- Subnet Mask: chỉ định số bit có thể thay đổi trên địa chỉ IP đó. Ví dụ (/0, /24, /32)
 
 Nhờ CIDR, việc cấp phát và quản lý địa chỉ IP đã trở nên linh hoạt và hiệu quả hơn. Giúp tiết kiệm không gian IP, tối ưu hoá các bảng định tuyến và tăng cường khả năng tái sử dụng IP. 
 
