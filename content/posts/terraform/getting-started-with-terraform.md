@@ -1,7 +1,7 @@
 ---
 title: "Chapter 1 - Getting started with Terraform"
-date: 2020-06-08T06:00:20+06:00
-hero: images/posts/terraform/figure1-2-deploying-to-multiple-clouds-concurrently-with-terraform.png
+date: 2024-08-14T06:00:20+06:00
+hero: /images/posts/terraform/figure1-2-deploying-to-multiple-clouds-concurrently-with-terraform.png
 description: "Chapter 1 - Getting started with Terraform"
 menu:
   sidebar:
