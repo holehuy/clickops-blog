@@ -1,8 +1,8 @@
 ---
 title: "Chapter 1 - Getting started with Terraform"
 date: 2020-06-08T06:00:20+06:00
-hero: /images/posts/vault-approaches/vault-components-hero-image.png
-description: "Bắt đầu với Terraform"
+hero: images/posts/terraform/figure1-2-deploying-to-multiple-clouds-concurrently-with-terraform.png
+description: "Chapter 1 - Getting started with Terraform"
 menu:
   sidebar:
     name: "Chapter 1 - Getting started with Terraform"
