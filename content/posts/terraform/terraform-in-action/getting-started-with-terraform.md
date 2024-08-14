@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Chapter 1 - Getting started with Terraform"
     identifier: getting-started-with-terraform
-    parent: terraform
+    parent: terraform-in-action
     weight: 10
 ---
 
