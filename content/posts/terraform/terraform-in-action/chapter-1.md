@@ -6,7 +6,7 @@ description: "Chapter 1 - Getting started with Terraform"
 menu:
   sidebar:
     name: "Chapter 1 - Getting started with Terraform"
-    identifier: getting-started-with-terraform
+    identifier: chapter-1
     parent: terraform-in-action
     weight: 10
 ---
