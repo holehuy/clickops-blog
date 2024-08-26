@@ -66,3 +66,11 @@ accomplishments:
     url: https://www.freecodecamp.org/
   courseOverview: "This course offers a comprehensive introduction to C# programming, covering its core concepts, syntax, and practical application in software development. Through hands-on exercises and projects, you will learn the fundamentals of C#, including variables, data types, control structures, and object-oriented programming principles. By the end of this course, you will have gained the practical skills and knowledge needed to confidently leverage C# for building applications."
   certificateURL: "https://www.freecodecamp.dev/certification/fcc749938b8-65d6-4938-93dd-644010e51fef/foundational-c-sharp-with-microsoft"
+
+- name: Alibaba Cloud Associate (ACA) Cloud Computing [2024]
+  timeline: "August 2024"
+  organization:
+    name: Udemy
+    url: https://www.udemy.com/course/alibaba-cloud-certified-associate-aca-cloud-computing/
+  courseOverview: "This course is focused on passing the Alibaba Cloud Associate Acca certification exam in cloud computing. You will learn everything you need to pass the certification exam on the first attempt. You will become on Alibaba Cloud Certified."
+  certificateURL: "https://www.udemy.com/certificate/UC-39985991-ffe8-4a1f-b416-b02b92a770b7/"
