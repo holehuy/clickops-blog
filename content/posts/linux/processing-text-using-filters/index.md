@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Processing Text Using Filters"
     identifier: processing-text-using-filters
-    parent: exploring-linux-command-line-tools
+    parent: linux
     weight: 3
 ---
 

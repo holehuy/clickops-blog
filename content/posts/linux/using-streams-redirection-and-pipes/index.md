@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Using Streams, Redirection, and Pipes"
     identifier: using-streams-redirection-and-pipes
-    parent: exploring-linux-command-line-tools
+    parent: linux
     weight: 5
 ---
 

@@ -1,9 +1,9 @@
 # More documentation here: https://github.com/nicksnyder/go-i18n
 [home]
-other = "Trang chủ"
+other = "Home"
 
 [posts]
-other = "Bài viết"
+other = "Posts"
 
 [toc_heading]
 other = "Mục lục"
@@ -114,7 +114,7 @@ other = "Hiện ít hơn"
 other = "Hơn"
 
 [view_certificate]
-other = "Xem chứng chỉ"
+other = "View Certificate"
 
 [notes]
 other = "Ghi chú"

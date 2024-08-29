@@ -1,0 +1,91 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: CMC Global
+    url: "https://www.example.com"
+    location: Da Nang, Viet Nam
+    logo: /images/sections/experiences/cmcglobal.png
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/experiences/company1.jpg
+    # company overview
+    overview: CMC Global was established with the vision of becoming a Top 10 service company in the region, and a leader in the ability to deploy new technology solutions such as AI, Cloud and digital transformation and the mission of "creating new technology solutions", providing services that meet international standards and are present globally. I work at CMC Global as a Software Engineer with skills related to Backend, Cloud Solution Architect and DevOps such as Cloud solution design, CI/CD process automation, system monitoring and assurance security.
+  positions:
+  - designation: Software Engineer - Public Relations and Event Management Platform (Singapore)
+    start: December 2023
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - "Migrate the system from monolith architecture to micro-service using AWS services, from server to serverless. Deploy micro-services on AWS Lambda Function, combined with API Gateway to provide API endpoints. Use AWS Aurora MySQL as a database for micro-services. Re-engineer application architecture to accommodate micro-service deployment."
+    - "Use AWS CloudFormation as an Infrastructure as Code (IaC) tool: Create and manage AWS infrastructure using CloudFormation templates. Automate infrastructure deployment processes, ensuring consistency and reproducibility. Apply IaC best practices to improve infrastructure management efficiency."
+    - "Deploy a CI/CD pipeline using AWS services: Use AWS CodeCommit to manage your project's source code. Set up AWS CodePipeline as a CI/CD pipeline to automatically build, test, and deploy applications. Use AWS CodeBuild to perform automatic code building and testing steps. Incorporate AWS CodeDeploy to automatically and securely deploy new versions of your applications."
+    - "Build Email and Marketing features with SES and Amazon Pinpoint: Use Amazon Simple Email Service (SES) to send marketing emails, notifications, and interact with customers. Combine Amazon Pinpoint to analyze user behavior and create effective marketing campaigns. Set up email templates, automate email sending processes based on events and user behavior. Track and measure the effectiveness of email marketing campaigns."
+    - "Develop e-ticket issuance feature through Google Wallet and Apple Wallet: Integration with Google Wallet API allows users to save and manage e-tickets on Android devices. Integration with the Apple Wallet API allows users to save and manage e-tickets on iOS devices."
+
+  - designation: Software Engineer -  Korea e-commerce projects related to packaging, with online 3D packaging design features 
+    start: August 2022
+    end: December 2023
+    responsibilities:
+    - "Develop API to support e-commerce platform: Build RESTful APIs using Node.js, ExpressJs and NestJs to manage product, order, and user data. API integration with MSSQL and PostgreSQL databases to store and retrieve data efficiently."
+    - "Integrating 3D design features with Three.js: Study and apply Three.js features like rendering, cameras, lighting, materials, and geometry to create rich 3D design experiences. Build interactive React components so users can customize and preview 3D models of product packaging. Optimize the performance and interactivity of your 3D design experience."
+    - "Develop product search and monitoring service features: Use ELK stack (Elasticsearch, Logstash, Kibana) to build effective product search features. Configure Elasticsearch to index and search products based on criteria such as name, description, keywords. Use Logstash to collect and standardize log data from applications and infrastructure."
+    - "Set up a CI/CD pipeline using Jenkins to automatically build, test, and deploy applications. Integrate tools like SonarQube to analyze source code, evaluate quality, and manage defects. Use Nginx as a proxy server, load balancer. Monitor and resolve issues during system operations, including errors and incident reports."
+    - "Deploy infrastructure using AWS services: Use AWS S3 to store and serve static resources such as images, CSS, JavaScript. Configure AWS CloudFront to deliver web content with high performance and reliability. Build AWS Lambda functions to handle asynchronous tasks like email, notifications, batch processing. Deploy backend applications on AWS EC2 to meet computing needs."
+
+- company:
+    name: Rising Stars Viet Nam
+    url: "https://www.example.com"
+    location: Da Nang, Viet Nam
+    logo: /images/sections/experiences/risingstars.jpeg
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/experiences/company2.jpg
+    overview: I took on the position of **Fullstack Developer** and participated in the project of developing a human resources management system, work management and digital transformation. The second project is a Web applicatipn to practice keyboard typing and learn English and Japanese for Japanese children. Through these two projects, I had the opportunity to develop comprehensive skills in full-stack programming, Agile project management, deploying AWS Cloud infrastructure, and building web applications using the LAMP stack. This is an extremely valuable training process, helping me be ready to take on positions with greater responsibility in the future.
+  positions:
+  - designation: Fullstack Developer
+    start: September 2021
+    end: August 2022
+    responsibilities:
+    - Work in an Agile Scrum team, applying Scrum methods and processes to manage projects effectively.
+    - Develop front-end features using React.js, Redux.
+    - Build APIs and data processing logic using Node.js and Express.js.
+    - Deploy AWS Cloud infrastructure, including EC2, S3, ...
+    - Build web applications using LAMP stack (Linux, Apache, MySQL, PHP) and PHP Cognito 3 framework.
+    - Develop features to practice keyboard typing and learn English and Japanese vocabulary and grammar.
+    - Integrate modern learning methods such as gamification, immediate feedback, and learning progress tracking.
+
+- company:
+    name: Xenia Tech
+    url: "https://www.example.com"
+    location: Da Nang, Viet Nam
+    logo: /images/sections/experiences/xeniatech.png
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/experiences/company3.jpg
+    overview: During my **Fullstack Nodejs Internship** and **Fresher** here, I had the opportunity to be exposed to the actual software development process, as well as improve my fullstack programming, teamwork, and problem-solving skills. This is extremely valuable experience, helping me better prepare for entering the labor market later.
+  positions:
+  - designation: Intern
+    start: February 2021
+    end: May 2021
+    responsibilities:
+    - Build API endpoints and server-side data processing logic using Node.js and Express.js.
+    - Design and implement MongoDB database for data storage and management.
+    - Develop UI with HTML, CSS, and JavaScript, using libraries and frameworks like React.js and Redux.
+    - Integrate front-end and back-end components through in-built APIs.
+    - Perform tasks related to source code management, deployment and testing.
+  - designation: Fresher
+    start: May 2021
+    end: September 2021
+    responsibilities:
+    - Participate in a job brokerage project for the Indonesian market. Responsible for developing the web interface for the admin page to manage the project's business activities.
+    - Build API endpoints and server-side data processing logic using Node.js and Express.js.
+    - Develop UI Develop UI with HTML, CSS, Bootstrap, Tailwind and JavaScript, using libraries ausing libraries and frameworks like React.js, theme AntDesign Pro.
+    - Design and implement MySQL database for data storage and management.

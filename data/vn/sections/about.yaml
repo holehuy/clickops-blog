@@ -1,0 +1,149 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Software Engineer
+# your company information
+company:
+  name: CMC Global.
+  url: "https://cmcglobal.com.vn"
+
+# your resume. this file path should be relative to you "static" directory
+# Dreprecated. Use resourceLinks instead.
+# resume: "files/resume.pdf"
+
+# a summary about you
+summary: 'I am a passionate software engineer with 3 years of working experience. I have experience with basic cloud computing platforms, specifically Amazon Web Services (AWS). Ability to implement CI/CD (Continuous Integration/Continuous Deployment) and DevOps practices to streamline software development and deployment processes. Proficient in NodeJs, Python, Terraform, Docker, ...'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "holehuy.it@gmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/holehuy"
+
+# - name: Stackoverflow
+#   icon: "fab fa-stack-overflow"
+#   url: "#"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/holehuy"
+
+# - name: Twitter
+#   icon: "fab fa-twitter"
+#   url: "#"
+
+- name: Facebook
+  icon: "fab fa-facebook"
+  url: "https://www.facebook.com/holehuy.it"
+
+# - name: Mastadon
+#   icon: "fab fa-mastodon"
+#   url: "#"
+#   rel: "me noopener"
+
+# - name: ResearchGate
+#   icon: "fab fa-researchgate"
+#   url: "https://www.researchgate.net/profile/john-doe"
+
+# You can put custom buttons to link your relevant resources.
+# For example, you can put link for your resume.
+# resourceLinks:
+# - title: "My Resume"
+#   url: "files/resume.pdf"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+# - type: certification
+#   name: HashiCorp Terraform Associate
+#   url: "https://images.credly.com/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png"
+#   badge: "https://images.credly.com/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png"
+
+# - type: certification
+#   name: HashiCorp Vault Associate
+#   url: "https://images.credly.com/size/680x680/images/fd1bf1cf-dc60-4868-b3a3-9b93e8af763c/image.png"
+#   badge: "https://images.credly.com/size/680x680/images/fd1bf1cf-dc60-4868-b3a3-9b93e8af763c/image.png"
+
+# - type: certification
+#   name: HashiCorp Vault Associate
+#   url: "https://images.credly.com/size/680x680/images/5a1ba86e-8a0f-44cb-b7e2-4c192480fedf/image.png"
+#   badge: "https://images.credly.com/size/680x680/images/5a1ba86e-8a0f-44cb-b7e2-4c192480fedf/image.png"
+
+# - type: certification
+#   name: AWS Certified Solutions Architect - Associate
+#   url: "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/twitter_thumb_201604_image.png"
+#   badge: "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/twitter_thumb_201604_image.png"
+
+# - type: certification
+#   name: AWS Certified SysOps Administrator - Associate
+#   url: "https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png"
+#   badge: "https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png"
+
+# - type: certification
+#   name: AWS Certified Developer - Associate
+#   url: "https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+#   badge: "https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+
+# - type: certification
+#   name: AWS Certified Data Engineer - Associate
+#   url: "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+#   badge: "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+
+# - type: certification
+#   name: AWS Certified Data Engineer - Associate
+#   url: "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+#   badge: "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+
+# - type: certification
+#   name: AWS Certified DevOps Engineer - Professional
+#   url: "https://images.credly.com/images/bd31ef42-d460-493e-8503-39592aaf0458/image.png"
+#   badge: "https://images.credly.com/images/bd31ef42-d460-493e-8503-39592aaf0458/image.png"
+
+# - type: certification
+#   name: Certified Kubernetes Administrator
+#   url: "https://images.credly.com/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
+#   badge: "https://images.credly.com/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
+
+# - type: certification
+#   name: Linux Profressional Institute - LPIC-1
+#   url: "https://images.credly.com/images/28669969-37c3-4fd1-9ef6-f67309e75bb7/LPI_LPIC1.png"
+#   badge: "https://images.credly.com/images/28669969-37c3-4fd1-9ef6-f67309e75bb7/LPI_LPIC1.png"
+
+# - type: certification
+#   name: Azure Solutions Architect Expert
+#   url: "https://images.credly.com/images/649069f9-27f1-4d2b-92bc-c674bc67bd02/azure-solutions-architect-expert-600x600.png"
+#   badge: "https://images.credly.com/images/649069f9-27f1-4d2b-92bc-c674bc67bd02/azure-solutions-architect-expert-600x600.png"
+
+# - type: soft-skill-indicator
+#   name: Leadership
+#   percentage: 85
+#   color: blue
+
+# - type: soft-skill-indicator
+#   name: Team Work
+#   percentage: 90
+#   color: yellow
+
+# - type: soft-skill-indicator
+#   name: Hard Working
+#   percentage: 85
+#   color: orange
+
+# you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Example 1
+#   percentage: 75
+#   color: "#00adb5"

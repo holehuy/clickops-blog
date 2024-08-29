@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Workshop Login System with Amplify, Cognito, Lambda and SES"
     identifier: build-a-login-system-welcome-email-with-amplify-cognito-etc
-    parent: first-cloud-journey
+    parent: aws
     weight: 3
 ---
 

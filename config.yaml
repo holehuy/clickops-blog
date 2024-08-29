@@ -82,6 +82,11 @@ languages:
     languageName: English
     title: "ClickOps's Corner"
     weight: 1
+  vn:
+    languageCode: vn
+    languageName: Tiếng Việt
+    title: "ClickOps's Corner"
+    weight: 2
 # default language for the content
 defaultContentLanguage: en
 

@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Module 02 - VPC"
     identifier: vpc-overview
-    parent: first-cloud-journey
+    parent: aws
     weight: 2
 ---
 

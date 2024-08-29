@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Using Regular Expressions"
     identifier: using-regular-expressions
-    parent: exploring-linux-command-line-tools
+    parent: linux
     weight: 4
 ---
 

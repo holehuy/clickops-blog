@@ -7,7 +7,7 @@ menu:
   sidebar:
     name: "Editing Text Files"
     identifier: editing-text-files
-    parent: exploring-linux-command-line-tools
+    parent: linux
     weight: 2
 ---
 

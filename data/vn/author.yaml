@@ -1,0 +1,21 @@
+# some information about you
+name: "Le Huy Ho"
+nickname: "Huy"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/logo.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "holehuy.it@gmail.com"
+  phone: "+84368429514"
+  github: holehuy
+  linkedin: holehuy
+  # researchgate: holehuy
+
+# some summary about what you do
+summary:
+  - I am a Developer
+  - I am a Devops
+  - I love servers
+  - I work on open-source projects
+  - I love to work with some fun projects
