@@ -69,8 +69,8 @@ socialLinks:
 badges:
 - type: certification
   name: HashiCorp Terraform Associate
-  url: "https://www.credly.com/badges/1439d80b-764b-4c40-b001-cc6a64a77da1"
-  badge: "https://images.credly.com/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png"
+  url: "https://www.credly.com/badges/1439d80b-764b-4c40-b001-cc6a64a77da1/public_url"
+  badge: "https://images.credly.com/size/680x680/images/ed4be915-68f8-428a-b332-40ded9084ee5/blob"
 
 # - type: certification
 #   name: HashiCorp Vault Associate
@@ -92,10 +92,10 @@ badges:
 #   url: "https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png"
 #   badge: "https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png"
 
-# - type: certification
-#   name: AWS Certified Developer - Associate
-#   url: "https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
-#   badge: "https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
+- type: certification
+  name: AWS Certified Developer - Associate
+  url: "https://www.credly.com/badges/f470a828-ae67-479b-bf92-b93f73bd74ce/public_url"
+  badge: "https://images.credly.com/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png"
 
 # - type: certification
 #   name: AWS Certified Data Engineer - Associate
